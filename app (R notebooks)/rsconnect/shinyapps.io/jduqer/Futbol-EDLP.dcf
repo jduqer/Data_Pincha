@@ -1,0 +1,13 @@
+name: Futbol-EDLP
+title: Futbol-EDLP
+username:
+account: jduqer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3290928
+bundleId: 4226374
+url: https://jduqer.shinyapps.io/Futbol-EDLP/
+when: 1613413912.22199
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|app.R|datasets.RData|fut-juvenil-calibrar-filtrar-plotear.nb.html|fut-juvenil-calibrar-filtrar-plotear.Rmd|Prepocesamiento.Rmd|tempglobal.r
