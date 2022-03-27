@@ -1,0 +1,26 @@
+{
+    "id": "1B27553D",
+    "path": "D:/BigData Pincha/Data_Pincha/app (R notebooks)/ui.r",
+    "project_path": "ui.r",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1648239190023.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "23,24",
+        "scrollLine": "5"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1613395822,
+    "encoding": "ISO8859-1",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1613395822,
+    "read_only": false,
+    "read_only_alternatives": []
+}
