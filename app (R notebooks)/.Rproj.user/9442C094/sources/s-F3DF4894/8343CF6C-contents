@@ -1,0 +1,10 @@
+
+
+body {
+  background-image: url(fondo.png);
+  background-size: 100% 100%;
+  font: 'BigNoodleTitling', Regular;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #00000;
+}
