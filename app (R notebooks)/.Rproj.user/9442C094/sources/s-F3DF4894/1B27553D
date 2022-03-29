@@ -3,7 +3,7 @@
     "path": "D:/BigData Pincha/Data_Pincha/app (R notebooks)/ui.r",
     "project_path": "ui.r",
     "type": "r_source",
-    "hash": "2939001739",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1648239190023.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "57,104",
-        "scrollLine": "31"
+        "cursorPosition": "12,27",
+        "scrollLine": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 1648416837,
