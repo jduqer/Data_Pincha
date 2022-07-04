@@ -1,0 +1,118 @@
+---
+title: "Calibrar, filtrar y plotear futbol juvenil big data EDLP"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(tidyverse)
+library(ggsoccer)
+```
+
+Cargo los datos
+```{r}
+# data_filtros <- read_csv("datos/9na Division VS Banfield Fecha 1-tabla filtros.csv", 
+#     col_types = cols(X1 = col_skip(), 
+#         `coord final` = col_character(), 
+#         `coord inicial` = col_character()))
+
+data_filtros <- read_delim("./datos/9na Division VS Banfield Fecha 1-tabla filtros.csv", 
+    ";", escape_double = FALSE, col_types = cols(Equipo = col_skip(), 
+        `coord final` = col_character(), 
+        `coord inicial` = col_character()), 
+    trim_ws = TRUE)
+
+
+colnames(data_filtros)
+```
+
+Filtrar por columnas que tengan 1
+```{r}
+data_plot <- data_filtros
+# MAXIMOS Y MARGENES
+max_x <- 610
+max_y <- 401
+margen_x <- 25
+margen_y <- 21
+
+
+# separo las coordenadas en x,y de inicial
+data_plot <- data_plot %>% separate(`coord inicial`,c('inicial_x','inicial_y')) %>%
+  mutate(inicial_x=abs(as.numeric(inicial_x)),inicial_y=abs(as.numeric(inicial_y)-max_y))
+# separo las coordenadas en x,y de destino
+data_plot <- data_plot %>% separate(`coord final`,c('final_x','final_y')) %>% 
+  mutate(final_x=abs(as.numeric(final_x)),final_y=abs(as.numeric(final_y)-max_y))
+
+# saco los que no tengan coordenada de inicio
+data_plot <- data_plot %>% filter(!is.na(inicial_x))
+
+
+
+
+
+#### CALIBRO COORDENADAS
+
+# cambio las coordenadas del segundo tiempo en el mismo df
+data_plot <- data_plot %>% 
+  mutate(
+    inicial_x = ifelse(segundos>=2100, max_x - inicial_x, inicial_x),
+    inicial_y = ifelse(segundos>=2100, max_y - inicial_y, inicial_y),
+    final_x = ifelse(segundos>=2100, max_x - final_x, final_x),
+    final_y = ifelse(segundos>=2100, max_x - final_y, final_y)
+  )
+
+
+# calibro coordenadas ( los llevo a coordenadas de rango 0-100 )
+data_plot <- data_plot %>%
+  mutate(inicial_x= (inicial_x-margen_x)/(max_x-2*margen_x)*100, 
+         inicial_y= (inicial_y-margen_y)/(max_y-2*margen_y)*100) %>% 
+  mutate(final_x= (final_x-margen_x)/(max_x-2*margen_x)*100, 
+         final_y= (final_y-margen_y)/(max_y-2*margen_y)*100) 
+
+# si supera 100+5 llevarlo a 101
+data_plot <- data_plot %>% 
+  mutate(inicial_x= ifelse(inicial_x>101,101,inicial_x),
+         inicial_y= ifelse(inicial_y>101,101,inicial_y),
+         final_x= ifelse(final_x>101,101,final_x),
+         final_y= ifelse(final_y>101,101,final_y))
+
+
+```
+
+
+```{r}
+
+# filtrar
+data_plotear <- data_plot %>% filter(`pase-Inteligente` == 1 & `Jugador 1` == 10)
+
+# PLOTEAR
+restar_y <- 0
+
+ggplot(data_plotear) +
+  annotate_pitch(colour = "white",
+                 fill   = "#7fc47f",
+                 limits = TRUE,
+                 dimensions = pitch_opta) +
+  geom_segment(aes(x = inicial_x, y = inicial_y-restar_y, xend = final_x, yend = final_y, 
+               colour = Calificaciondelevento),
+               arrow = arrow(length = unit(0.25, "cm"),
+                             type = "closed")) +
+  theme_pitch() +
+  geom_point(aes(x = inicial_x, y = inicial_y-restar_y, fill= Calificaciondelevento),
+             colour = "black", 
+             pch = 21,
+             size = 5)  +
+  direction_label(
+          x_label = 50,
+          y_label = -3,
+          label_length = 20,
+          colour = "dimgray") +
+  annotate("text", 
+           x=data_plotear$inicial_x,
+           y=data_plotear$inicial_y-restar_y, 
+           label=data_plotear$`Jugador 1`, 
+           color='white', size=3.5) 
+
+```

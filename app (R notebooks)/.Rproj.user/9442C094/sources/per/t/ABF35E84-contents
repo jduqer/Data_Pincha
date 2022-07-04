@@ -1,0 +1,219 @@
+
+
+source("./global.r")
+#library(fontawesome)
+
+###########
+# LOAD UI #
+###########
+
+shinyUI(fluidPage(
+  
+  # load custom stylesheet
+  includeCSS("www/style.css"),
+  
+  # load google analytics script
+  #tags$head(includeScript("www/google-analytics-bioNPS.js")),
+  
+  # remove shiny "red" warning messages on GUI
+  tags$style(type="text/css",
+             ".shiny-output-error { visibility: hidden; }",
+             ".shiny-output-error:before { visibility: hidden; }"
+  ),
+  
+  # load page layout
+  dashboardPage(
+    
+    skin = "red",
+      
+    dashboardHeader(title="BigData Futbol", titleWidth = 300),
+    
+    dashboardSidebar(width = 300,
+      sidebarMenu(
+        HTML(paste0(
+          "<br>",
+          "<a href='https://www.estudiantesdelaplata.com/' target='_blank'><img style = 'display: block; margin-left: auto; margin-right: auto;' src='logo_edelp.svg' width = '186'></a>",
+          "<br>",
+          #"<p style = 'text-align: center;'><small><a href='https://www.nps.gov/subjects/hfc/arrowhead-artwork.htm' target='_blank'>NPS logo disclaimer</a></small></p>",
+          "<br>"
+        )),
+        menuItem("Home", tabName = "home", icon = icon("home")),
+        menuItem("Analisis General", tabName = "general", icon = icon("list-alt")),
+        menuItem("Analisis Jugadores", tabName = "table", icon = icon("table")),
+        menuItem("Analisis Equipo", tabName = "tree", icon = icon("random", lib = "glyphicon")),
+        menuItem("Analisis Situaciones", tabName = "charts", icon = icon("stats", lib = "glyphicon")),
+        HTML(paste0(
+          "<br><br><br><br><br><br><br><br><br>",
+          "<table style='margin-left:auto; margin-right:auto;'>",
+            "<tr>",
+              "<td style='padding: 5px;'><a href='https://www.facebook.com/EdelpOficial' target='_blank'><i class='fab fa-facebook-square fa-lg'></i></a></td>",
+              "<td style='padding: 5px;'><a href='https://www.youtube.com/edelpoficial' target='_blank'><i class='fab fa-youtube fa-lg'></i></a></td>",
+              "<td style='padding: 5px;'><a href='https://www.twitter.com/edelpoficial' target='_blank'><i class='fab fa-twitter fa-lg'></i></a></td>",
+              "<td style='padding: 5px;'><a href='https://www.instagram.com/edelpoficial' target='_blank'><i class='fab fa-instagram fa-lg'></i></a></td>",
+              #"<td style='padding: 5px;'><a href='https://www.flickr.com/nationalparkservice' target='_blank'><i class='fab fa-flickr fa-lg'></i></a></td>",
+            "</tr>",
+          "</table>",
+          "<br>"),
+        HTML(paste0(
+          "<script>",
+            "var today = new Date();",
+            "var yyyy = today.getFullYear();",
+          "</script>",
+          "<p style = 'text-align: center;'><small>&copy; - <a href='https://www.estudiantesdelaplata.com/innova/' target='_blank'>Oficina Big Data</a> - <script>document.write(yyyy);</script></small></p>")
+        ))
+      )
+      
+    ), # end dashboardSidebar
+    
+    dashboardBody(
+      
+      tabItems(
+        
+        tabItem(tabName = "home",
+          
+          # home section
+          includeMarkdown("www/home.md")
+          
+        ),
+        
+        tabItem(tabName = "general",
+        
+          # resumen total estadisticas por partido
+          fluidRow(
+            column(width = 4,
+              selectInput('partidototales', 'Partido', filterpartido, multiple=FALSE, selectize=FALSE),
+            ),
+            column(width = 8,
+                   valueBoxOutput("Golfavor"),
+                   valueBoxOutput("Golcontra"),
+            ),
+          ),
+          fluidRow(
+                  box(title = "Pases",  solidHeader = TRUE,
+                      fluidRow(
+                          column(width = 6,
+                            "Completos",
+                            verbatimTextOutput("PasesC",placeholder = TRUE),
+                            ),
+                          column(width = 6,
+                            "Incompletos",
+                            verbatimTextOutput("PasesI",placeholder = TRUE),
+                          )),
+                      fluidRow(
+                        column(width = 12,
+                          plotlyOutput("pasestotal",height = 'auto'),
+                      )),
+                ),
+                box(title = "Duelos",  solidHeader = TRUE,
+                    fluidRow(column(width = 6,
+                                    "Ganados",
+                                    verbatimTextOutput("DuelosC",placeholder = TRUE),
+                    ),
+                    column(width = 6,
+                           "Perdidos",
+                           verbatimTextOutput("DuelosI",placeholder = TRUE),
+                    )),
+                    fluidRow(
+                      column(width = 12,
+                             plotlyOutput("duelostotal",height = 'auto'),
+                      )),
+                ),
+          ),
+        fluidRow(
+          box(title = "Recuperaciones",  solidHeader = TRUE,
+              fluidRow(column(width = 6,
+                              "Recuperaciones",
+                              verbatimTextOutput("RecuperacionesT",placeholder = TRUE),
+                              )
+                       ),
+              fluidRow(column(width = 12,
+                              plotlyOutput("recupetotal",height = 'auto'),
+                              #dataTableOutput("recupetotal")
+                      ),
+              ),
+              
+          ),
+          box(title = "Perdidas",  solidHeader = TRUE,
+              fluidRow(column(width = 6,
+                              "Perdidas",
+                              verbatimTextOutput("PerdidasC",placeholder = TRUE),
+              )
+              ),
+              fluidRow(column(width = 12,
+                              plotlyOutput("perditotal",height = 'auto'),
+              ),
+              ),
+              
+          ),
+        ),
+        fluidRow(
+          box(title = "Remates",  solidHeader = TRUE,
+              fluidRow(column(width = 6,
+                              "Remates",
+                              verbatimTextOutput("RematesT",placeholder = TRUE),
+              )
+              ),
+              fluidRow(column(width = 12,
+                              plotlyOutput("rematotal",height = 'auto'),
+                              #dataTableOutput("recupetotal")
+              ),
+              ),
+              
+          ),
+          box(title = "Pelota Parada", solidHeader = TRUE,
+              fluidRow(
+                    column(width = 6,
+                           "Completas",
+                           verbatimTextOutput("ParadaC",placeholder = TRUE),
+                    ),
+                    column(width = 6,
+                           "Incompletas",
+                           verbatimTextOutput("ParadaI",placeholder = TRUE),
+                    )),
+              fluidRow(
+                    column(width = 12,
+                           plotlyOutput("paradatotal",height = 'auto'),
+                    )
+                  ),
+          ),
+        ),
+      ),
+        
+        
+        tabItem(
+          # species data section
+          tabName = "table", 
+          dataTableOutput("speciesDataTable") %>% withSpinner(color = "green")
+          
+        ),
+        
+        tabItem(tabName = "tree", 
+              
+          # collapsible species tree section
+          #includeMarkdown("www/tree.md"),
+          #column(3, uiOutput("parkSelectComboTree")),
+          #column(3, uiOutput("categorySelectComboTree")),
+          collapsibleTreeOutput('tree', height='700px') %>% withSpinner(color = "green")
+          
+        ),
+      
+        tabItem(tabName = "charts",
+          
+          # ggplot2 species charts section
+          #includeMarkdown("www/charts.md"),
+          #fluidRow(column(3, uiOutput("categorySelectComboChart"))),
+          column(6, plotOutput("ggplot2Group1") %>% withSpinner(color = "green")),
+          column(6, plotOutput("ggplot2Group2") %>% withSpinner(color = "green"))
+
+        )
+        
+        
+    
+
+      )
+    
+    ) # end dashboardBody
+  
+  )# end dashboardPage
+
+))

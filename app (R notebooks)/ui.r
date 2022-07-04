@@ -13,7 +13,7 @@ fluidPage(
     tabPanel("Por Jugador",
       sidebarLayout(
         sidebarPanel(
-             checkboxGroupInput('jugador1', 'Jugador', filterjugador, selected = 2, inline = TRUE),
+             selectizeInput('jugador1', 'Jugador', filterjugador, multiple=TRUE),
              selectizeInput('filtroremate1', 'Remate', filtroeventosremate, multiple=TRUE),
              selectizeInput('filtropases1', 'Pases', filtroeventospases, multiple=TRUE, selected = "Completado"),
              selectizeInput('filtrocentros1', 'Centros', filtroeventoscentros, multiple=TRUE),
@@ -56,7 +56,7 @@ fluidPage(
              sidebarLayout(
                sidebarPanel(
                    selectInput('partido3', 'Partido', filterpartido,selected = "Banfield", multiple=TRUE),
-                   checkboxGroupInput('jugador3', 'Jugador', filterjugador, selected = 2, inline = TRUE),
+                   selectizeInput('jugador3', 'Jugador', filterjugador, multiple=TRUE),
                    selectizeInput('filtroremate3', 'Remate', filtroeventosremate, multiple=TRUE),
                    selectizeInput('filtropases3', 'Pases', filtroeventospases, selected = "Completado",multiple=TRUE),
                    selectizeInput('filtrocentros3', 'Centros', filtroeventoscentros, multiple=TRUE),

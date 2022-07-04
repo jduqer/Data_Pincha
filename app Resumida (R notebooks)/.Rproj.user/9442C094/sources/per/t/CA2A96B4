@@ -1,0 +1,26 @@
+{
+    "id": "CA2A96B4",
+    "path": "D:/BigData Pincha/Data_Pincha/app Resumida (R notebooks)/server.r",
+    "project_path": "server.r",
+    "type": "r_source",
+    "hash": "1908110981",
+    "contents": "",
+    "dirty": false,
+    "created": 1648239186652.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "267,19",
+        "scrollLine": "246"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1656113520,
+    "encoding": "ISO8859-1",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1656113520722,
+    "read_only": false,
+    "read_only_alternatives": []
+}

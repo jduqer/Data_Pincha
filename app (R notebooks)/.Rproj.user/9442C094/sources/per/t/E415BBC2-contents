@@ -1,0 +1,374 @@
+
+
+library(shiny)
+library(tidyverse)
+library(leaflet.extras)
+library(rvest)
+
+
+#####Funciones#############
+
+################
+# SERVER LOGIC #
+################
+
+shinyServer(function(input, output) {
+   
+  
+  #filtro partidos
+  juego <- reactive(
+    return ( input$partidototales )
+  )
+  
+  #Para los goles
+  output$rival <- renderText({
+    juego()
+  })
+  
+  golesF <- reactive({
+    df <- soccer %>%
+      select(Apellido,partido,Evento)%>%
+      filter(Evento == 'gol' & partido %in% juego())
+    return(df)
+  })
+  
+  output$Golfavor <- renderValueBox({
+    
+    valueBox(
+      nrow(golesF()), "Estudiantes", color = "red"
+    )  })
+  
+  golesC <- reactive({
+    df <- soccer %>%
+      select(Apellido,partido,Evento)%>%
+      filter(Evento == 'gol rival'& partido %in% juego())
+  })
+  
+  output$Golcontra <- renderValueBox({
+    valueBox(
+      nrow(golesC()),juego(), color = "black"
+    )
+      
+      })
+  
+  
+  #pases completos df
+  dfpasesc <- reactive({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`pase-Asistencia`,`pase-Completado`,`pase-Inteligente`) %>% 
+      filter(partido %in% juego() & (`pase-Asistencia` == 1 | `pase-Completado` == 1 | `pase-Inteligente` ==1))
+    return(df)
+  })
+  
+  #pases incompletos df
+  dfpasesi <- reactive({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`pase-Fuera`,`pase-Interceptado`) %>% 
+      filter(partido %in% juego() & (`pase-Fuera` == 1 | `pase-Interceptado` == 1 ))
+    return(df)
+  })
+  
+  
+  
+  # Cargar los totales por partido
+  
+  output$PasesC <- renderText(
+    nrow(dfpasesc())
+  )
+  
+  output$PasesI <- renderText(
+    nrow(dfpasesi())
+  )
+  
+  #Grafico pases
+  output$pasestotal <- renderPlotly({
+    df1 <- dfpasesc()
+    df2 <- dfpasesi()
+    dftotal <- data.frame(Pases = c('Completo','Incompleto'), cantidad = c(nrow(df1),nrow(df2)))
+    plot_ly(dftotal,values=~cantidad,labels=~factor(Pases),marker=list(colors=c("#f25f5c","#50514f")),type="pie",textfont = list(color ='white'))
+
+  })
+  
+  #duelos completos df
+  dfduelosc <- reactive({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`duelo-Aereo-Ganado`,`duelo-Disputa-suelo-Ganada`,`duelo-Gambeta-contra-Ganada`,`duelo-Gambeta-favor-Ganada`,`duelo-Pivote-Ganado`) %>% 
+      filter(partido %in% juego() & (`duelo-Aereo-Ganado` == 1 | `duelo-Disputa-suelo-Ganada` == 1 | `duelo-Gambeta-contra-Ganada` ==1 | `duelo-Gambeta-favor-Ganada` == 1 | `duelo-Pivote-Ganado` ==1))
+    
+    return(df)
+    
+  })
+  
+  #duelos incompletos df
+  dfduelosi <- reactive({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`duelo-Aereo-Perdido`,`duelo-Disputa-suelo-Perdida`,`duelo-Gambeta-contra-Perdida`,`duelo-Gambeta-favor-Perdida`,`duelo-Pivote-Perdido`) %>% 
+      filter(partido %in% juego() & (`duelo-Aereo-Perdido` == 1 | `duelo-Disputa-suelo-Perdida` == 1 | `duelo-Gambeta-contra-Perdida` ==1 | `duelo-Gambeta-favor-Perdida` == 1 | `duelo-Pivote-Perdido` ==1))
+    return(df)
+  })
+  
+  
+  output$DuelosC <- renderText({
+    return(nrow(dfduelosc()))
+  }
+  )
+  
+  output$DuelosI <- renderText({
+    return(nrow(dfduelosi()))
+  }
+  )
+  
+  output$duelostotal <- renderPlotly({
+    df1 <- dfduelosc()
+    df2 <- dfduelosi()
+    dftotal <- data.frame(Duelos = c('Ganados','Perdidos'), cantidad = c(nrow(df1),nrow(df2)))
+    plot_ly(dftotal,values=~cantidad,labels=~factor(Duelos),marker=list(colors=c("#f25f5c","#50514f")),type="pie",textfont = list(color ='white'))
+  })
+  
+  #Ahora para recuperaciones
+  recupeT <- reactive({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Disputa-suelo`,`recuperacion-Encontrada`,`recuperacion-Robo`,`recuperacion-Intercepcion-suelo`,`recuperacion-Intercepcion-aereo`,`recuperacion-Intercepcion-anticipo`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Disputa-suelo`== 1 | `recuperacion-Encontrada` == 1 | `recuperacion-Robo` == 1| `recuperacion-Intercepcion-suelo` == 1 |`recuperacion-Intercepcion-aereo` == 1 |`recuperacion-Intercepcion-anticipo`== 1))
+    
+    return(df)
+    
+  })
+  
+  output$RecuperacionesT <- renderText({
+    return(nrow(recupeT()))
+  })
+  
+  output$recupetotal <- renderPlotly({
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Disputa-suelo`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Disputa-suelo`== 1))
+
+    dfinal <- data.frame(Evento = 'Disputa Suelo',Cantidad = nrow(df))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Encontrada`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Encontrada` == 1))
+    
+    dfinal <- rbind(dfinal,c('Encontrada',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Robo`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Robo` == 1))
+    
+    dfinal <- rbind(dfinal,c('Robo',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Intercepcion-suelo`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Intercepcion-suelo` == 1))
+    
+    dfinal <- rbind(dfinal,c('Intercepcion Suelo',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Intercepcion-aereo`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Intercepcion-aereo` == 1))
+    
+    dfinal <- rbind(dfinal,c('Intercepcion Aereo',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`recuperacion-Intercepcion-anticipo`) %>% 
+      filter(partido %in% juego() & (`recuperacion-Intercepcion-anticipo` == 1))
+    
+    dfinal <- rbind(dfinal,c('Intercepcion Anticipo',nrow(df)))
+    
+    dfinal$Cantidad <-  as.numeric(dfinal$Cantidad)
+    
+    plot_ly(dfinal,y=~Cantidad,x=~factor(Evento),type="bar",color = I('#50514f') ,text =~Cantidad, textposition = 'auto', textfont = list(color='white'))%>%
+      layout(xaxis = list(title = ""))
+    
+      
+  })
+  
+  # Ahora para Perdidas
+  perdidasT <- reactive({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Atajada`,`perdida-Balon-fuera`,`perdida-Error-tecnico`,`perdida-Gambeta-favor`,`perdida-Intercepcion`,`perdida-Robo`) %>% 
+      filter(partido %in% juego() & (`perdida-Atajada` == 1|`perdida-Balon-fuera`==1|`perdida-Error-tecnico`==1|`perdida-Gambeta-favor`==1|`perdida-Intercepcion`==1|`perdida-Robo`==1))
+    
+    return(df)
+    
+  })
+  
+  output$PerdidasC <- reactive({
+    nrow(perdidasT())
+  })
+  
+  output$perditotal <- renderPlotly({
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Atajada`) %>% 
+      filter(partido %in% juego() & (`perdida-Atajada` == 1))
+    
+    dfinal <- data.frame(Evento = 'Atajada',Cantidad = nrow(df))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Balon-fuera`) %>% 
+      filter(partido %in% juego() & (`perdida-Balon-fuera` == 1))
+    
+    dfinal <- rbind(dfinal,c('Balon Fuera',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Error-tecnico`) %>% 
+      filter(partido %in% juego() & (`perdida-Error-tecnico` == 1))
+    
+    dfinal <- rbind(dfinal,c('Error Tecnico',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Gambeta-favor`) %>% 
+      filter(partido %in% juego() & (`perdida-Gambeta-favor` == 1))
+    
+    dfinal <- rbind(dfinal,c('Gambeta Favor',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Intercepcion`) %>% 
+      filter(partido %in% juego() & (`perdida-Intercepcion` == 1))
+    
+    dfinal <- rbind(dfinal,c('Intercepcion',nrow(df)))
+    
+    df <-  soccer %>% 
+      select(Apellido,Jugador.2,partido,`perdida-Robo`) %>% 
+      filter(partido %in% juego() & (`perdida-Robo` == 1))
+    
+    dfinal <- rbind(dfinal,c('Robo',nrow(df)))
+    
+    dfinal$Cantidad <-  as.numeric(dfinal$Cantidad)
+    
+    plot_ly(dfinal,y=~Cantidad,x=~factor(Evento),type="bar",color = I('#50514f') ,text =~Cantidad, textposition = 'auto', textfont = list(color='white'))%>%
+      layout(xaxis = list(title = ""))
+    
+    
+  })
+  
+  # Ahora remates
+  rematetotal <- reactive({
+    df <- soccer%>%
+      select(partido,Apellido,`remate-Al-arco`,`remate-Cabeza`,`remate-Fuera`,`remate-Gol`,`remate-Interceptado`)%>%
+      filter(partido %in% juego() & (`remate-Al-arco` == 1 |`remate-Cabeza`==1|`remate-Fuera`==1|`remate-Gol`==1|`remate-Interceptado`==1))
+    return(df)
+  })
+  
+  output$RematesT <- renderText({
+    nrow(rematetotal())
+  })
+  
+  output$rematotal <- renderPlotly({
+    df <- soccer %>%
+      select(partido,Apellido,`remate-Al-arco`)%>%
+      filter(partido %in% juego() & `remate-Al-arco` == 1)
+    dfinal <- data.frame(Evento = 'Al Arco',Cantidad = nrow(df))
+    
+    df <- soccer%>%
+      select(partido,Apellido,`remate-Cabeza`)%>%
+      filter(partido %in% juego() & `remate-Cabeza` == 1)
+    
+    dfinal <- rbind(dfinal,c('Cabeza',nrow(df)))
+    
+    df <- soccer%>%
+      select(partido,Apellido,`remate-Fuera`)%>%
+      filter(partido %in% juego() & `remate-Fuera` == 1)
+    
+    dfinal <- rbind(dfinal,c('Fuera',nrow(df)))
+    
+    df <- soccer%>%
+      select(partido,Apellido,`remate-Gol`)%>%
+      filter(partido %in% juego() & `remate-Gol` == 1)
+    
+    dfinal <- rbind(dfinal,c('Gol',nrow(df)))
+    
+    df <- soccer%>%
+      select(partido,Apellido,`remate-Interceptado`)%>%
+      filter(partido %in% juego() & `remate-Interceptado` == 1)
+    
+    dfinal <- rbind(dfinal,c('Interceptado',nrow(df)))
+    
+    dfinal$Cantidad <-  as.numeric(dfinal$Cantidad)
+    
+    plot_ly(dfinal,y=~Cantidad,x=~factor(Evento),type="bar",color = I('#50514f') ,text =~Cantidad, textposition = 'auto', textfont = list(color='white'))%>%
+      layout(xaxis = list(title = ""))
+    
+  })
+
+  #Ahora pelota parada
+  parac <- reactive({
+    df <- soccer %>%
+      select(Apellido,partido,`parado-Lateral-completado`,`parado-Corner-completado`,`parado-Tiro-libre-completado`) %>%
+      filter(partido %in% juego()&(`parado-Lateral-completado` ==1 |`parado-Corner-completado` == 1|`parado-Tiro-libre-completado`==1))
+    return(df)
+  })
+  
+  parai <- reactive({
+    df <- soccer %>%
+      select(Apellido,partido,`parado-Lateral-interceptado`,`parado-Corner-interceptado`,`parado-Tiro-libre-incompleto`) %>%
+      filter(partido %in% juego() & (`parado-Lateral-interceptado` == 1|`parado-Corner-interceptado`==1|`parado-Tiro-libre-incompleto`==1))
+    return(df)
+    
+  })
+  
+  output$ParadaC <- renderText({
+    nrow(parac())
+  })
+  
+  output$ParadaI <- renderText({
+    nrow(parai())
+  })
+  
+  output$paradatotal <- renderPlotly({
+    df <- soccer %>%
+      select(partido,Apellido,`parado-Lateral-completado`) %>%
+      filter(partido %in% juego() & `parado-Lateral-completado` ==1)
+    
+    df2 <- soccer %>%
+      select(partido,Apellido,`parado-Lateral-interceptado`) %>%
+      filter(partido %in% juego() & `parado-Lateral-interceptado` ==1)
+    
+    dfinal <- data.frame(Evento = "Lateral",Completo = nrow(df),Incompleto = nrow(df2))
+    
+    df <- soccer %>%
+      select(partido,Apellido,`parado-Tiro-libre-completado`) %>%
+      filter(partido %in% juego() & `parado-Tiro-libre-completado` ==1)
+    
+    df2 <- soccer %>%
+      select(partido,Apellido,`parado-Tiro-libre-incompleto`) %>%
+      filter(partido %in% juego() & `parado-Tiro-libre-incompleto` ==1)
+    
+    dfinal <- rbind(dfinal,c("Tiro Libre",Completo = nrow(df),Incompleto = nrow(df2)))
+    
+    df <- soccer %>%
+      select(partido,Apellido,`parado-Corner-completado`) %>%
+      filter(partido %in% juego() & `parado-Corner-completado` ==1)
+    
+    df2 <- soccer %>%
+      select(partido,Apellido,`parado-Corner-interceptado`) %>%
+      filter(partido %in% juego() & `parado-Corner-interceptado` ==1)
+    
+    dfinal <- rbind(dfinal,c("Corner",Completo = nrow(df),Incompleto = nrow(df2)))
+    
+    dfinal$Completo <- as.numeric(dfinal$Completo)
+    dfinal$Incompleto <- as.numeric(dfinal$Incompleto)
+    
+    df2 <- melt(dfinal[,c("Evento","Completo","Incompleto")])
+    
+    plot_ly(df2,x = ~Evento, y = ~value, type = 'bar', 
+            name = ~variable,text =~value,color = ~variable,colors = c("#f25f5c","#50514f"), textposition = 'auto',textfont = list(color='white')) %>%
+      layout(yaxis = list(title = 'Cantidad'),xaxis=list(title = ""), barmode = 'stack')
+    
+    
+    
+    
+    #dfinal$Cantidad <-  as.numeric(dfinal$Cantidad)
+    
+    #plot_ly(dfinal,y=~Cantidad,x=~factor(Evento),type="bar",color = I('#50514f') ,text =~Cantidad, textposition = 'auto', textfont = list(color='white'))%>%
+     # layout(xaxis = list(title = ""))
+    
+  })
+  
+})  
+  
+  
+  
+ 

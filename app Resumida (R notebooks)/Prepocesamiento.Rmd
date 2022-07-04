@@ -1,0 +1,105 @@
+---
+title: "Preprocesamiento"
+author: "Javier Duque - Lucas Pecina"
+date: "3/11/2020"
+output: html_document
+---
+
+```{r library}
+# Borrar variables del ambiente
+rm(list = objects())
+library(shiny)
+library(dplyr)
+require(stringr)
+require(tidyverse)
+require(ggsoccer)
+library(readr)
+```
+
+```{r}
+soccer1 <- read_delim("./datos/9na Division VS Banfield Fecha 1-tabla filtros.csv", 
+    ";", escape_double = FALSE, col_types = cols(`Minuto en el video` = col_character(), 
+        `coord inicial` = col_character(), 
+        `coord final` = col_character()), 
+    trim_ws = TRUE)
+soccer2 <- read_delim("./datos/9na division VS R. Central-tabla filtros.csv", 
+    ";", escape_double = FALSE, col_types = cols(`Minuto en el video` = col_character(), 
+        `coord inicial` = col_character(), 
+        `coord final` = col_character()), 
+    trim_ws = TRUE)
+  
+soccer3 <- read_delim("datos/9na Division VS At Tuc Fecha 3-tabla filtros.csv", 
+    ";", escape_double = FALSE, col_types = cols(`Minuto en el video` = col_character(), 
+        `coord inicial` = col_character(), 
+        `coord final` = col_character()), 
+    trim_ws = TRUE)
+soccer4 <- read_delim("./datos/9na Division VS Huracan ultima fecha-tabla filtros.csv", 
+    ";", escape_double = FALSE, col_types = cols(`Minuto en el video` = col_character(), 
+        `coord inicial` = col_character(), 
+        `coord final` = col_character()), 
+    trim_ws = TRUE)
+
+soccer_total <- rbind(soccer1,soccer2)
+soccer_total <- rbind(soccer_total,soccer3)
+soccer_total <- rbind(soccer_total,soccer4)
+
+unique(soccer_total$partido)
+```
+
+```{r}
+write.csv(soccer_total,"./datos/9na Division total-tabla filtros.csv")
+```
+
+```{r}
+# Define server logic required to draw a histogram ----
+soccer <- read.csv("datos/9na Division total-tabla filtros.csv")
+
+colnames(soccer)
+```
+#soccer <- read_excel("datos/9NA DIVISION VS BANFIELD FECHA 1 SUPERLIGA 16_03_2019.xlsx")
+
+```{r}
+soccer$Jugador.1 <- as.integer(soccer$Jugador.1)
+soccer$Jugador.2 <- as.integer(soccer$Jugador.2)
+soccer$Posicion.incial <- as.integer(soccer$Posicion.incial)
+soccer$Posicion.final <- as.integer(soccer$Posicion.final)
+
+soccer$Evento <- tolower(soccer$Evento)
+soccer$Subevento <- tolower(soccer$Subevento)
+soccer$Evento <- str_trim(soccer$Evento)
+soccer$Subevento <- str_trim(soccer$Subevento)
+
+filterevento <- unique(soccer$Evento)
+filterjugador <- unique(soccer$Jugador.1)
+
+
+soccer <- soccer %>% separate(coord.inicial,c('inicial_x','inicial_y')) %>% mutate(inicial_x=abs(as.numeric(inicial_x)),inicial_y=abs(as.numeric(inicial_y)-322))
+soccer <- soccer %>% separate(coord.final,c('final_x','final_y')) %>% mutate(final_x=abs(as.numeric(final_x)),final_y=abs(as.numeric(final_y)-322))
+
+soccer <- soccer %>% filter(!is.na(final_x)) %>%
+  mutate(inicial_x=inicial_x/max(soccer$inicial_x,na.rm = TRUE)*100, inicial_y=inicial_y/max(soccer$inicial_y,na.rm = TRUE)*100) %>% 
+  mutate(final_x=final_x/max(soccer$final_x,na.rm = TRUE)*100, final_y=final_y/max(soccer$final_y,na.rm = TRUE)*100) 
+```
+```{r}
+filtroeventos <- colnames(soccer)
+filtroeventos <- filtroeventos[14:71]
+filtroeventos
+```
+
+```{r}
+texto <- "pase.completado"
+
+soccer %>%
+filter(.,Jugador.1 == 2, texto == 1)%>%
+select(.,Jugador.1,Jugador.2,Calificaciondelevento, pase.completado)
+```
+
+```{r}
+summary(soccer)
+```
+
+```{r}
+soccer %>% 
+  filter(partido == "Banfield")
+```
+

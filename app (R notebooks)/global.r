@@ -9,9 +9,11 @@ require(tidyverse)
 library(plotly)
 
 # Define UI for app that draws a histogram ----
-soccer <- read_csv("../procesamiento de etiquetas/Datos generados para la app/reserva22-PRESENTACION_app_20220317.csv",
+soccer <- read_csv("../procesamiento de etiquetas/Datos generados para la app/reserva22-completo.csv",
                    col_types = cols(coord.final = col_character(),
                                     coord.inicial = col_character()))
+
+
 
 # Define UI for app that draws a histogram ----
 # soccer <- read_csv("datos/PERDIDAS-fecha13-platense-tabla filtros-ESPEJO.csv",
@@ -92,7 +94,7 @@ soccer <- soccer %>%
 #   mutate(final_x=final_x/max(soccer$final_x,na.rm = TRUE)*100, final_y=final_y/max(soccer$final_y,na.rm = TRUE)*100)
 
 
-filterjugador <- sort(unique(soccer$Jugador.1),decreasing=FALSE)
+filterjugador <- sort(unique(soccer$Apellido),decreasing=FALSE)
 
 filterpartido <- unique(soccer$partido)
 
@@ -106,6 +108,6 @@ filtroeventosduelos <-  c("Aereo-Perdido","Aereo-Ganado","Disputa-suelo-Perdida"
                           "Gambeta-favor-Ganada","Pivote-Perdido","Pivote-Ganado")
 filtroeventosfaltas <-  c("Cometida","Recibida","Penal-cometido","Penal-recibido","Offside","Tarjeta-amarilla","Tarjeta-roja")
 filtroeventosrecuperacion <- c("Robo","Encontrada","Intercepcion-suelo","Intercepcion-aereo","Intercepcion-anticipo","Disputa-suelo")
-filtroeventosparada <- c("Lateral-interceptado","Lateral-completado","Corner-interceptado","Corner-completado","Tiro-libre")
+filtroeventosparada <- c("Lateral-interceptado","Lateral-completado","Corner-interceptado","Corner-completado","Tiro-libre-completado","Tiro-libre-incompleto")
 filtroeventosperdida <- c("Gambeta-favor","Robo","Intercepcion","Error-tecnico","Balon-fuera","Situacion-rival","Atajada")
 filtroeventosarquero <- c("Gol-rival","Atajada","Intercepcion-aerea","Intercepcion","Anticipo","Saque-mano","Saque-pie","Saque-meta")

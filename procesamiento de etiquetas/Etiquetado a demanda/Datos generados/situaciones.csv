@@ -1,0 +1,434 @@
+Partido,Situacion,Evento,Subevento,Tiempo_inicial,Tiempo_final,Jugador,Zonas_Inicial,Zonas_Final
+Arsenal,A favor,Pase corto,Ataque combinado,00:01:00,00:01:06,8,5,7
+Arsenal,A favor,Pase corto,Ataque combinado,00:01:06,00:01:12,9,7,5
+Arsenal,A favor,Pase corto,Ataque combinado,00:01:12,00:01:18,5,5,6
+Arsenal,A favor,Pase corto,Ataque combinado,00:01:16,00:01:22,4,6,5
+Arsenal,A favor,Pase corto,Ataque combinado,00:01:20,00:01:26,5,5,8
+Arsenal,A favor,Pase corto,Ataque combinado,00:01:26,00:01:32,9,8,8
+Arsenal,A favor,Remate atajado,Ataque combinado,00:01:30,00:01:36,8,8,8
+Arsenal,A favor,Pase largo,Ataque Directo,00:07:45,00:07:51,11,5,9
+Arsenal,A favor,Centro,Ataque Directo,00:07:50,00:07:56,7,9,8
+Arsenal,A favor,Remate atajado,Ataque Directo,00:07:58,00:08:04,9,8,8
+Arsenal,A favor,Corner,Pelota Parada,00:22:23,00:22:29,3,7,Volver
+Arsenal,A favor,Centro,Pelota Parada,00:22:34,00:22:40,3,7,8
+Arsenal,A favor,Despeje,Pelota Parada,00:22:37,00:22:43,Rival,8,8
+Arsenal,A favor,Pase corto,Pelota Parada,00:22:40,00:22:46,7,8,9
+Arsenal,A favor,Centro,Pelota Parada,00:22:44,00:22:50,2,9,8
+Arsenal,A favor,Remate atajado,Pelota Parada,00:22:47,00:22:53,4,8,8
+Arsenal,A favor,Pase corto,Ataque combinado,00:26:52,00:26:58,10,6,6
+Arsenal,A favor,Pase largo,Ataque combinado,00:26:56,00:27:02,4,6,8
+Arsenal,A favor,Remate atajado,Ataque combinado,00:27:00,00:27:06,9,8,8
+Arsenal,A favor,Recuperacion,Ataque Directo,00:33:29,00:33:35,5,5,9
+Arsenal,A favor,Gambeta,Ataque Directo,00:33:36,00:33:42,7,9,Volver
+Arsenal,A favor,Pase bloq,Ataque Directo,00:33:41,00:33:50,7,9,8
+Arsenal,A favor,Pase largo,Ataque Directo,00:33:49,00:33:55,5,9,8
+Arsenal,A favor,Remate pie,Ataque Directo,00:33:52,00:33:58,8,8,8
+Arsenal,A favor,Gol,Ataque Directo,00:33:57,00:34:03,8,8,Volver
+Arsenal,A favor,Pase corto,Ataque combinado,00:43:14,00:43:20,11,4,5
+Arsenal,A favor,Pase corto,Ataque combinado,00:43:18,00:43:24,8,5,5
+Arsenal,A favor,Pase corto,Ataque combinado,00:43:22,00:43:28,4,5,8
+Arsenal,A favor,Pase corto,Ataque combinado,00:43:26,00:43:32,10,8,8
+Arsenal,A favor,Remate atajado,Ataque combinado,00:43:31,00:43:37,4,8,8
+Arsenal,A favor,Corner,Pelota Parada,00:10:58,00:11:04,3,7,Volver
+Arsenal,A favor,Centro,Pelota Parada,00:11:03,00:11:09,3,7,8
+Arsenal,A favor,Remate atajado,Pelota Parada,00:11:08,00:11:14,9,8,8
+Arsenal,A favor,Tiro libre,Pelota Parada,00:19:21,00:19:27,11,7,Volver
+Arsenal,A favor,Remate atajado,Pelota Parada,00:19:25,00:19:31,11,7,8
+Arsenal,A favor,Remate pie,Pelota Parada,00:19:32,00:19:40,4,8,8
+Arsenal,A favor,Perdida,Pelota Parada,00:19:39,00:19:45,4,8,Volver
+Arsenal,A favor,Tiro libre,Pelota Parada,00:35:53,00:35:59,3,9,Volver
+Arsenal,A favor,Remate atajado,Pelota Parada,00:35:57,00:36:03,3,9,8
+Arsenal,En contra,Pase largo,Ataque Directo,00:47:01,00:47:07,Rival,4,5
+Arsenal,En contra,Gambeta,Ataque Directo,00:47:06,00:47:12,Rival,5,9
+Arsenal,En contra,Remate atajado,Ataque Directo,00:47:09,00:47:15,Rival,9,8
+Boca,A favor,Tiro libre,Pelota Parada,00:25:21,00:25:27,5,8,Volver
+Boca,A favor,Remate bloq,Pelota Parada,00:25:27,00:25:33,5,8,8
+Boca,A favor,Remate bloq,Pelota Parada,00:25:32,00:25:38,9,8,8
+Boca,A favor,Recuperacion,Transición,00:29:22,00:29:28,11,4,Volver
+Boca,A favor,Pase corto,Transición,00:29:28,00:29:37,6,4,5
+Boca,A favor,Pase corto,Transición,00:29:34,00:29:40,8,5,7
+Boca,A favor,Centro,Transición,00:29:39,00:29:45,11,7,8
+Boca,A favor,Despeje,Transición,00:29:44,00:29:50,Rival,8,Volver
+Boca,A favor,Recuperacion,Transición,00:29:48,00:29:54,8,8,Volver
+Boca,A favor,Pase corto,Transición,00:29:51,00:29:57,8,8,8
+Boca,A favor,Remate atajado,Transición,00:29:57,00:30:03,4,8,8
+Boca,A favor,Tiro libre,Pelota Parada,00:34:05,00:34:11,8,5,Volver
+Boca,A favor,Centro,Pelota Parada,00:34:10,00:34:16,8,5,9
+Boca,A favor,Remate Aereo,Pelota Parada,00:34:13,00:34:19,2,9,8
+Boca,En contra,Pase bloq,Transición,00:40:23,00:40:29,6,9,5
+Boca,En contra,Recuperacion,Transición,00:40:27,00:40:33,Rival,5,Volver
+Boca,En contra,Pase corto,Transición,00:40:33,00:40:39,Rival,5,8
+Boca,En contra,Pase corto,Transición,00:40:38,00:40:44,Rival,8,8
+Boca,En contra,Pase corto,Transición,00:40:42,00:40:48,Rival,8,8
+Boca,En contra,Remate pie,Transición,00:40:47,00:40:53,Rival,8,8
+Boca,En contra,Gol,Transición,00:40:52,00:40:58,Rival,8,Volver
+Boca,A favor,Lateral,Pelota Parada,00:45:48,00:45:54,4,6,9
+Boca,A favor,Disputa suelo,Pelota Parada,00:45:54,00:46:00,9,9,Volver
+Boca,A favor,Remate atajado,Pelota Parada,00:45:58,00:46:04,7,9,8
+Boca,A favor,Pase largo,Pelota Parada,01:28:00,01:28:06,6,5,7
+Boca,A favor,Centro,Pelota Parada,01:28:05,01:28:11,3,7,8
+Boca,A favor,Remate atajado,Pelota Parada,01:28:09,01:28:15,9,8,8
+Boca,En contra,Recuperacion,Transición,01:36:33,01:36:39,Rival,5,Volver
+Boca,En contra,Pase corto,Transición,01:36:37,01:36:43,Rival,5,5
+Boca,En contra,Pase corto,Transición,01:36:41,01:36:47,Rival,5,8
+Boca,En contra,Remate bloq,Transición,01:36:47,01:36:53,Rival,8,8
+Boca,A favor,Corner,Pelota Parada,01:40:15,01:40:21,11,7,Volver
+Boca,A favor,Centro,Pelota Parada,01:40:18,01:40:24,11,7,8
+Boca,A favor,Remate Aereo,Pelota Parada,01:40:22,01:40:28,6,8,8
+Boca,En contra,Pase corto,Ataque combinado,01:54:39,01:54:45,Rival,4,5
+Boca,En contra,Pase corto,Ataque combinado,01:54:45,01:54:51,Rival,5,5
+Boca,En contra,Pase largo,Ataque combinado,01:54:48,01:54:54,Rival,5,9
+Boca,En contra,Centro,Ataque combinado,01:54:51,01:54:57,Rival,9,8
+Boca,En contra,Remate bloq,Ataque combinado,01:54:56,01:55:02,Rival,8,8
+Boca,En contra,Recuperacion,Transición,02:08:10,02:08:16,Rival,5,Volver
+Boca,En contra,Pase corto,Transición,02:08:15,02:08:21,Rival,5,8
+Boca,En contra,Remate atajado,Transición,02:08:18,02:08:24,Rival,8,8
+Boca,A favor,Tiro libre,Pelota Parada,02:12:45,02:12:51,8,4,Volver
+Boca,A favor,Centro,Pelota Parada,02:12:49,02:12:55,8,4,8
+Boca,A favor,Remate Aereo,Pelota Parada,02:12:56,02:13:02,Suplente 1,8,8
+Independiente,A favor,Lateral,Pelota Parada,00:07:23,00:07:29,4,6,6
+Independiente,A favor,Disputa aereo,Pelota Parada,00:07:25,00:07:31,11,6,6
+Independiente,A favor,Gambeta,Pelota Parada,00:07:27,00:07:33,8,6,9
+Independiente,A favor,Centro,Pelota Parada,00:07:37,00:07:44,10,9,8
+Independiente,A favor,Pase corto,Pelota Parada,00:07:39,00:07:46,9,8,8
+Independiente,A favor,Gambeta,Pelota Parada,00:07:44,00:07:50,7,8,Volver
+Independiente,A favor,Penal,Pelota Parada,00:08:00,00:08:06,7,8,Volver
+Independiente,A favor,Penal,Pelota Parada,00:08:17,00:08:23,7,8,Volver
+Independiente,A favor,Lateral,Pelota Parada,00:09:00,00:09:06,4,3,6
+Independiente,A favor,Disputa aereo,Pelota Parada,00:09:04,00:09:10,9,6,Volver
+Independiente,A favor,Pase largo,Pelota Parada,00:09:08,00:09:14,9,6,9
+Independiente,A favor,Centro,Pelota Parada,00:09:12,00:09:18,11,9,8
+Independiente,A favor,Remate bloq,Pelota Parada,00:09:15,00:09:21,7,8,Volver
+Independiente,A favor,Falta,Pelota Parada,00:09:21,00:09:27,7,8,Volver
+Independiente,En contra,Recuperacion,Ataque Directo,00:14:08,00:14:14,Rival,7,Volver
+Independiente,En contra,Centro,Ataque Directo,00:14:13,00:14:23,Rival,7,8
+Independiente,En contra,Remate pie,Ataque Directo,00:14:21,00:14:27,Rival,8,8
+Independiente,En contra,Gol,Ataque Directo,00:14:26,00:14:32,Rival,8,Volver
+Independiente,A favor,Pase corto,Ataque combinado,00:16:42,00:16:48,9,6,5
+Independiente,A favor,Pase corto,Ataque combinado,00:16:47,00:16:53,3,5,7
+Independiente,A favor,Centro,Ataque combinado,00:16:50,00:16:56,8,7,8
+Independiente,A favor,Pase corto,Ataque combinado,00:16:54,00:17:00,11,9,9
+Independiente,A favor,Remate atajado,Ataque combinado,00:16:57,00:17:03,9,9,8
+Independiente,A favor,Pase corto,Ataque combinado,00:19:44,00:19:50,2,5,5
+Independiente,A favor,Pase corto,Ataque combinado,00:19:47,00:19:57,8,5,6
+Independiente,A favor,Centro,Ataque combinado,00:19:58,00:20:04,4,6,8
+Independiente,A favor,Remate atajado,Ataque combinado,00:20:01,00:20:07,9,8,8
+Independiente,A favor,Tiro libre,Pelota Parada,00:29:06,00:29:13,5,8,Volver
+Independiente,A favor,Remate atajado,Pelota Parada,00:29:11,00:29:17,5,5,8
+Independiente,A favor,Penal,Pelota Parada,00:29:20,00:29:26,2,8,Volver
+Independiente,A favor,Penal,Pelota Parada,00:30:31,00:30:37,9,8,Volver
+Independiente,A favor,Gol,Pelota Parada,00:31:12,00:31:18,9,8,Volver
+Independiente,A favor,Corner,Pelota Parada,00:33:25,00:33:31,10,9,8
+Independiente,A favor,Remate atajado,Pelota Parada,00:33:31,00:33:37,2,8,8
+Independiente,A favor,Pase corto,Ataque combinado,00:36:54,00:37:00,5,5,5
+Independiente,A favor,Pase corto,Ataque combinado,00:37:00,00:37:06,4,6,9
+Independiente,A favor,Centro,Ataque combinado,00:37:05,00:37:17,11,9,8
+Independiente,A favor,Disputa aereo,Ataque combinado,00:37:14,00:37:20,9,8,Volver
+Independiente,A favor,Gol,Ataque combinado,00:37:21,00:37:27,9,8,Volver
+Independiente,A favor,Recuperacion,Ataque Directo,00:43:02,00:43:08,3,4,7
+Independiente,A favor,Pase largo,Ataque Directo,00:43:08,00:43:14,3,7,8
+Independiente,A favor,Pase corto,Ataque Directo,00:43:12,00:43:23,9,8,9
+Independiente,A favor,Remate pie,Ataque Directo,00:43:21,00:43:27,11,9,8
+Independiente,A favor,Gol,Ataque Directo,00:43:25,00:43:31,11,8,Volver
+Independiente,En contra,Tiro libre,Pelota Parada,00:47:39,00:47:45,Rival,7,Volver
+Independiente,En contra,Remate atajado,Pelota Parada,00:48:27,00:48:33,Rival,7,8
+Independiente,En contra,Recuperacion,Pelota Parada,00:49:09,00:49:15,Rival,7,Volver
+Independiente,En contra,Penal,Pelota Parada,00:49:24,00:49:30,11,7,Volver
+Independiente,En contra,Penal,Pelota Parada,00:49:43,00:49:49,Rival,8,Volver
+Independiente,En contra,Remate atajado,Pelota Parada,00:49:53,00:49:59,Rival,8,8
+Independiente,En contra,Remate pie,Pelota Parada,00:49:59,00:50:05,Rival,8,8
+Independiente,En contra,Gol,Pelota Parada,00:50:06,00:50:12,Rival,8,Volver
+Independiente,A favor,Disputa aereo,Ataque combinado,01:10:14,01:10:20,10,6,6
+Independiente,A favor,Pase corto,Ataque combinado,01:10:18,01:10:24,11,6,9
+Independiente,A favor,Remate atajado,Ataque combinado,01:10:22,01:10:28,9,9,8
+Independiente,En contra,Corner,Pelota Parada,01:12:19,01:12:25,Rival,7,Volver
+Independiente,En contra,Centro,Pelota Parada,01:12:37,01:12:43,Rival,7,8
+Independiente,En contra,Remate pie,Pelota Parada,01:12:41,01:12:47,Rival,8,8
+Independiente,En contra,Gol,Pelota Parada,01:12:44,01:12:50,Rival,8,Volver
+Independiente,A favor,Corner,Pelota Parada,01:33:26,01:33:32,10,9,Volver
+Independiente,A favor,Centro,Pelota Parada,01:33:30,01:33:36,10,9,8
+Independiente,A favor,Remate bloq,Pelota Parada,01:33:35,01:33:41,6,8,8
+Independiente,A favor,Corner,Pelota Parada,01:42:55,01:43:01,10,9,Volver
+Independiente,A favor,Centro,Pelota Parada,01:43:00,01:43:08,10,9,8
+Independiente,A favor,Remate atajado,Pelota Parada,01:43:06,01:43:12,6,8,8
+Independiente,A favor,Pase corto,Ataque combinado,01:48:07,01:48:13,6,2,4
+Independiente,A favor,Pase corto,Ataque combinado,01:48:15,01:48:21,3,4,5
+Independiente,A favor,Pase largo,Ataque combinado,01:48:20,01:48:26,Suplente 1,5,9
+Independiente,A favor,Remate atajado,Ataque combinado,01:48:25,01:48:31,Suplente 2,9,8
+Huracan,En contra,Lateral,Pelota Parada,00:26:13,00:26:51,Rival,3,3
+Huracan,En contra,Disputa suelo,Pelota Parada,00:26:23,00:26:29,Rival,3,3
+Huracan,En contra,Gambeta,Pelota Parada,00:26:36,00:26:42,Rival,2,Volver
+Huracan,En contra,Remate pie,Pelota Parada,00:26:39,00:26:45,Rival,2,2
+Huracan,En contra,Recuperacion,Ataque Directo,00:36:09,00:36:20,Rival,2,Volver
+Huracan,En contra,Remate atajado,Ataque Directo,00:36:18,00:36:24,Rival,2,2
+Huracan,A favor,Tiro libre,Pelota Parada,00:39:45,00:40:03,8,4,Volver
+Huracan,A favor,Centro,Pelota Parada,00:39:50,00:39:56,8,4,9
+Huracan,A favor,Disputa aereo,Pelota Parada,00:39:54,00:40:01,6,9,Volver
+Huracan,A favor,Penal,Pelota Parada,00:39:59,00:40:05,2,8,Volver
+Huracan,A favor,Penal,Pelota Parada,00:40:59,00:41:17,9,8,Volver
+Huracan,A favor,Remate atajado,Pelota Parada,00:41:06,00:41:12,9,8,8
+Huracan,En contra,Pase corto,Ataque combinado,01:00:41,01:00:59,Rival,5,4
+Huracan,En contra,Pase corto,Ataque combinado,01:00:45,01:00:51,Rival,4,1
+Huracan,En contra,Remate atajado,Ataque combinado,01:00:49,01:00:55,Rival,1,2
+Huracan,A favor,Pase largo,Ataque combinado,01:03:08,01:03:24,4,6,9
+Huracan,A favor,Centro,Ataque combinado,01:03:13,01:03:23,11,9,8
+Huracan,A favor,Remate pie,Ataque combinado,01:03:21,01:03:27,7,8,8
+Huracan,En contra,Tiro libre,Pelota Parada,01:28:57,01:29:05,Rival,7,Volver
+Huracan,En contra,Remate atajado,Pelota Parada,01:29:01,01:29:07,Rival,7,8
+Huracan,En contra,Lateral,Pelota Parada,01:48:57,01:49:18,Rival,1,4
+Huracan,En contra,Disputa suelo,Pelota Parada,01:49:02,01:49:12,Rival,4,Volver
+Huracan,En contra,Disputa suelo,Pelota Parada,01:49:10,01:49:20,Rival,8,Volver
+Huracan,En contra,Remate pie,Pelota Parada,01:49:17,01:49:23,Rival,8,8
+Huracan,En contra,Gol,Pelota Parada,01:49:22,01:49:28,Rival,8,Volver
+Huracan,En contra,Pase largo,Ataque combinado,01:53:34,01:53:52,Rival,1,4
+Huracan,En contra,Disputa suelo,Ataque combinado,01:53:39,01:53:45,Rival,4,Volver
+Huracan,En contra,Centro,Ataque combinado,01:53:43,01:53:54,Rival,7,8
+Huracan,En contra,Remate pie,Ataque combinado,01:53:51,01:53:57,Rival,8,8
+Huracan,A favor,Recuperacion,Ataque combinado,01:57:10,01:57:28,2,5,Volver
+Huracan,A favor,Pase corto,Ataque combinado,01:57:14,01:57:26,2,5,6
+Huracan,A favor,Centro,Ataque combinado,01:57:24,01:57:30,4,6,8
+Huracan,A favor,Penal,Ataque combinado,01:57:29,01:57:35,Suplente 1,8,Volver
+Huracan,A favor,Penal,Pelota Parada,01:58:57,01:59:10,9,8,Volver
+Huracan,A favor,Remate atajado,Pelota Parada,01:59:03,01:59:09,9,8,8
+Huracan,En contra,Pase corto,Ataque combinado,02:05:47,02:06:05,Rival,2,6
+Huracan,En contra,Pase largo,Ataque combinado,02:05:51,02:05:57,Rival,6,9
+Huracan,En contra,Pase corto,Ataque combinado,02:05:56,02:06:02,Rival,9,8
+Huracan,En contra,Remate atajado,Ataque combinado,02:06:00,02:06:06,Rival,8,8
+Huracan,En contra,Recuperacion,Ataque Directo,02:07:25,02:07:43,Rival,5,Volver
+Huracan,En contra,Pase largo,Ataque Directo,02:07:29,02:07:35,Rival,5,9
+Huracan,En contra,Gambeta,Ataque Directo,02:07:34,02:07:40,Rival,9,Volver
+Huracan,En contra,Remate pie,Ataque Directo,02:07:38,02:07:44,Rival,9,8
+Huracan,En contra,Pase largo,Ataque Directo,02:09:27,02:09:38,Rival,5,8
+Huracan,En contra,Remate pie,Ataque Directo,02:09:33,02:09:39,Rival,8,8
+Huracan,En contra,Gol,Ataque Directo,02:09:37,02:09:43,Rival,8,Volver
+Gimnasia,A favor,Tiro libre,Pelota Parada,00:20:58,00:21:04,11,4,Volver
+Gimnasia,A favor,Centro,Pelota Parada,00:21:03,00:21:09,11,4,8
+Gimnasia,A favor,Centro,Pelota Parada,00:21:07,00:21:13,2,9,8
+Gimnasia,A favor,Remate Aereo,Pelota Parada,00:21:13,00:21:19,5,8,8
+Gimnasia,A favor,Gol,Pelota Parada,00:21:17,00:21:23,5,8,Volver
+Gimnasia,En contra,Pase corto,Ataque Directo,00:29:33,00:29:42,Rival,4,4
+Gimnasia,En contra,Pase largo,Ataque Directo,00:29:40,00:29:46,Rival,4,9
+Gimnasia,En contra,Remate atajado,Ataque Directo,00:29:45,00:29:51,Rival,9,8
+Gimnasia,A favor,Despeje,Ataque Directo,00:30:49,00:30:55,6,2,5
+Gimnasia,A favor,Disputa aereo,Ataque Directo,00:30:56,00:31:05,9,5,Volver
+Gimnasia,A favor,Disputa suelo,Ataque Directo,00:31:04,00:31:10,9,8,Volver
+Gimnasia,A favor,Remate atajado,Ataque Directo,00:31:08,00:31:14,9,9,8
+Gimnasia,En contra,Pase largo,Ataque Directo,00:31:09,00:31:18,Rival,4,8
+Gimnasia,En contra,Pase corto,Ataque Directo,00:31:15,00:31:21,Rival,8,8
+Gimnasia,En contra,Remate atajado,Ataque Directo,00:31:19,00:31:25,Rival,8,8
+Gimnasia,A favor,Tiro libre,Pelota Parada,00:36:08,00:36:14,5,7,Volver
+Gimnasia,A favor,Remate bloq,Pelota Parada,00:36:13,00:36:19,5,7,8
+Gimnasia,A favor,Recuperacion,Ataque Directo,00:50:07,00:50:13,3,4,Volver
+Gimnasia,A favor,Pase corto,Ataque Directo,00:50:12,00:50:21,3,4,5
+Gimnasia,A favor,Pase largo,Ataque Directo,00:50:19,00:50:25,5,5,8
+Gimnasia,A favor,Remate Aereo,Ataque Directo,00:50:24,00:50:30,9,8,8
+Gimnasia,A favor,Recuperacion,Ataque Directo,01:05:12,01:05:18,3,4,Volver
+Gimnasia,A favor,Pase corto,Ataque Directo,01:05:17,01:05:23,5,4,5
+Gimnasia,A favor,Remate atajado,Ataque Directo,01:05:21,01:05:27,10,8,8
+Gimnasia,En contra,Tiro libre,Pelota Parada,01:33:36,01:33:42,Rival,7,Volver
+Gimnasia,En contra,Remate pie,Pelota Parada,01:33:39,01:33:45,Rival,7,8
+Gimnasia,En contra,Gol,Pelota Parada,01:33:43,01:33:49,Rival,8,Volver
+Gimnasia,En contra,Corner,Pelota Parada,01:38:05,01:38:11,Rival,9,Volver
+Gimnasia,En contra,Pase corto,Pelota Parada,01:38:08,01:38:14,Rival,9,9
+Gimnasia,En contra,Centro,Pelota Parada,01:38:11,01:38:17,Rival,9,8
+Gimnasia,En contra,Remate bloq,Pelota Parada,01:38:15,01:38:21,Rival,8,8
+Gimnasia,En contra,Tiro libre,Pelota Parada,01:43:18,01:43:24,Rival,8,Volver
+Gimnasia,En contra,Remate atajado,Pelota Parada,01:43:21,01:43:27,Rival,8,8
+Gimnasia,En contra,Pase corto,Ataque Directo,01:54:35,01:54:41,Rival,2,5
+Gimnasia,En contra,Pase largo,Ataque Directo,01:54:40,01:54:46,Rival,5,7
+Gimnasia,En contra,Pase corto,Ataque Directo,01:54:44,01:54:50,Rival,7,8
+Gimnasia,En contra,Remate pie,Ataque Directo,01:54:48,01:54:54,Rival,8,8
+Gimnasia,En contra,Gol,Ataque Directo,01:54:53,01:54:59,Rival,8,Volver
+Lanus,En contra,Pase largo,Ataque Directo,00:01:03,00:01:09,Rival,5,9
+Lanus,En contra,Pase largo,Ataque Directo,00:01:09,00:01:15,Rival,9,8
+Lanus,En contra,Remate atajado,Ataque Directo,00:01:12,00:01:18,Rival,8,8
+Lanus,En contra,Corner,Pelota Parada,00:02:01,00:02:07,Rival,7,Volver
+Lanus,En contra,Pase largo,Pelota Parada,00:02:08,00:02:19,Rival,7,8
+Lanus,En contra,Remate atajado,Pelota Parada,00:02:16,00:02:22,Rival,8,8
+Lanus,A favor,Lateral,Pelota Parada,00:08:27,00:08:33,3,7,Volver
+Lanus,A favor,Centro,Pelota Parada,00:08:33,00:08:39,3,7,8
+Lanus,A favor,Remate Aereo,Pelota Parada,00:08:38,00:08:44,11,8,8
+Lanus,En contra,Pase corto,Ataque combinado,00:11:08,00:11:14,Rival,5,5
+Lanus,En contra,Pase corto,Ataque combinado,00:11:15,00:11:21,Rival,5,8
+Lanus,En contra,Remate atajado,Ataque combinado,00:11:20,00:11:26,Rival,8,8
+Lanus,En contra,Corner,Pelota Parada,00:27:21,00:27:27,Rival,7,Volver
+Lanus,En contra,Pase corto,Pelota Parada,00:27:27,00:27:35,Rival,7,7
+Lanus,En contra,Centro,Pelota Parada,00:27:32,00:27:41,Rival,7,8
+Lanus,En contra,Remate Aereo,Pelota Parada,00:27:40,00:27:46,Rival,8,8
+Lanus,En contra,Gol,Pelota Parada,00:27:44,00:27:50,Rival,8,Volver
+Lanus,En contra,Pase corto,Ataque combinado,00:35:53,00:35:59,Rival,5,4
+Lanus,En contra,Pase corto,Ataque combinado,00:35:57,00:36:03,Rival,4,5
+Lanus,En contra,Pase corto,Ataque combinado,00:36:02,00:36:13,Rival,5,8
+Lanus,En contra,Pase corto,Ataque combinado,00:36:10,00:36:16,Rival,8,7
+Lanus,En contra,Centro,Ataque combinado,00:36:15,00:36:21,Rival,7,8
+Lanus,En contra,Remate Aereo,Ataque combinado,00:36:22,00:36:28,Rival,8,8
+Lanus,A favor,Recuperacion,Ataque Directo,00:37:08,00:37:14,5,5,Volver
+Lanus,A favor,Pase largo,Ataque Directo,00:37:13,00:37:19,5,5,8
+Lanus,A favor,Remate pie,Ataque Directo,00:37:18,00:37:24,Suplente 2,8,8
+Lanus,A favor,Gol,Ataque Directo,00:37:22,00:37:28,Suplente 2,8,Volver
+Lanus,En contra,Lateral,Pelota Parada,00:05:50,00:05:56,Rival,9,Volver
+Lanus,En contra,Disputa suelo,Pelota Parada,00:05:55,00:06:01,Rival,9,Volver
+Lanus,En contra,Remate atajado,Pelota Parada,00:05:59,00:06:05,Rival,9,8
+Lanus,A favor,Pase largo,Ataque Directo,00:08:02,00:08:08,5,5,9
+Lanus,A favor,Disputa suelo,Ataque Directo,00:08:07,00:08:13,11,9,Volver
+Lanus,A favor,Penal,Ataque Directo,00:08:11,00:08:17,11,9,Volver
+Lanus,A favor,Penal,Pelota Parada,00:09:54,00:10:00,7,8,Volver
+Lanus,A favor,Gol,Pelota Parada,00:10:01,00:10:07,7,8,Volver
+Lanus,En contra,Corner,Pelota Parada,00:19:21,00:19:27,Rival,7,Volver
+Lanus,En contra,Centro,Pelota Parada,00:19:27,00:19:33,Rival,7,8
+Lanus,En contra,Pase corto,Pelota Parada,00:19:32,00:19:38,Rival,8,9
+Lanus,En contra,Pase corto,Pelota Parada,00:19:36,00:19:45,Rival,9,8
+Lanus,En contra,Remate bloq,Pelota Parada,00:19:42,00:19:48,Rival,8,8
+Lanus,En contra,Penal,Pelota Parada,00:19:47,00:19:53,Rival,8,Volver
+Lanus,En contra,Penal,Pelota Parada,00:20:56,00:21:02,Rival,8,Volver
+Lanus,En contra,Gol,Pelota Parada,00:21:01,00:21:07,Rival,8,Volver
+Lanus,En contra,Perdida,Transición,00:27:30,00:27:36,10,6,Volver
+Lanus,En contra,Pase corto,Transición,00:27:35,00:27:41,Rival,6,5
+Lanus,En contra,Pase largo,Transición,00:27:39,00:27:47,Rival,5,7
+Lanus,En contra,Pase corto,Transición,00:27:44,00:27:50,Rival,7,8
+Lanus,En contra,Remate atajado,Transición,00:27:48,00:27:54,Rival,8,8
+Lanus,A favor,Corner,Pelota Parada,00:33:08,00:33:14,3,7,8
+Lanus,A favor,Centro,Pelota Parada,00:33:18,00:33:24,3,7,8
+Lanus,A favor,Remate Aereo,Pelota Parada,00:33:19,00:33:25,2,8,8
+Lanus,En contra,Pase corto,Ataque combinado,00:33:44,00:33:53,Rival,2,1
+Lanus,En contra,Pase largo,Ataque combinado,00:33:50,00:33:56,Rival,4,6
+Lanus,En contra,Centro,Ataque combinado,00:33:56,00:34:07,Rival,9,8
+Lanus,En contra,Disputa suelo,Ataque combinado,00:34:04,00:34:10,Rival,8,Volver
+Lanus,En contra,Remate bloq,Ataque combinado,00:34:11,00:34:17,Rival,8,Volver
+Lanus,En contra,Pase largo,Ataque combinado,00:35:45,00:35:51,Rival,5,7
+Lanus,En contra,Gambeta,Ataque combinado,00:35:50,00:35:56,Rival,7,8
+Lanus,En contra,Centro,Ataque combinado,00:35:54,00:36:00,Rival,8,9
+Lanus,En contra,Remate atajado,Ataque combinado,00:36:00,00:36:06,Rival,9,8
+Lanus,A favor,Recuperacion,Transición,00:37:42,00:37:48,8,5,Volver
+Lanus,A favor,Remate pie,Transición,00:37:49,00:37:55,3,5,8
+Lanus,A favor,Gol,Transición,00:37:52,00:37:58,3,8,Volver
+Lanus,En contra,Corner,Pelota Parada,00:39:42,00:39:48,Rival,7,Volver
+Lanus,En contra,Centro,Pelota Parada,00:39:46,00:39:52,Rival,7,8
+Lanus,En contra,Remate Aereo,Pelota Parada,00:39:50,00:39:56,Rival,8,8
+Lanus,En contra,Gol,Pelota Parada,00:39:54,00:40:00,Rival,8,Volver
+Lanus,A favor,Tiro libre,Pelota Parada,00:41:53,00:41:59,10,9,Volver
+Lanus,A favor,Centro,Pelota Parada,00:41:59,00:42:09,10,9,8
+Lanus,A favor,Despeje,Pelota Parada,00:42:07,00:42:13,Rival,8,8
+Lanus,A favor,Remate pie,Pelota Parada,00:42:10,00:42:16,3,8,8
+Lanus,A favor,Gol,Pelota Parada,00:42:15,00:42:21,3,8,Volver
+Lanus,A favor,Pase largo,Ataque Directo,00:44:31,00:44:37,6,5,8
+Lanus,A favor,Pase corto,Ataque Directo,00:44:35,00:44:47,7,8,7
+Lanus,A favor,Remate bloq,Ataque Directo,00:44:46,00:44:52,9,7,8
+Tigre,A favor,Pase largo,Ataque Directo,00:26:34,00:26:40,6,4,7
+Tigre,A favor,Centro,Ataque Directo,00:26:41,00:26:49,10,7,8
+Tigre,A favor,Remate Aereo,Ataque Directo,00:26:47,00:26:53,9,8,8
+Tigre,En contra,Recuperacion,Transición,00:27:59,00:28:05,Rival,4,Volver
+Tigre,En contra,Disputa suelo,Transición,00:28:11,00:28:17,Rival,5,Volver
+Tigre,En contra,Remate bloq,Transición,00:28:14,00:28:20,Rival,8,8
+Tigre,En contra,Pase corto,Ataque combinado,00:33:23,00:33:29,Rival,6,5
+Tigre,En contra,Pase corto,Ataque combinado,00:33:29,00:33:35,Rival,5,4
+Tigre,En contra,Pase corto,Ataque combinado,00:33:40,00:33:46,Rival,4,7
+Tigre,En contra,Pase corto,Ataque combinado,00:33:45,00:33:51,Rival,7,7
+Tigre,En contra,Pase corto,Ataque combinado,00:33:49,00:33:55,Rival,7,8
+Tigre,En contra,Remate atajado,Ataque combinado,00:33:54,00:34:02,Rival,8,8
+Tigre,En contra,Pase corto,Ataque combinado,00:34:00,00:34:06,Rival,9,9
+Tigre,En contra,Pase corto,Ataque combinado,00:34:05,00:34:11,Rival,9,8
+Tigre,En contra,Remate atajado,Ataque combinado,00:34:10,00:34:16,Rival,8,8
+Tigre,A favor,Pase corto,Ataque combinado,00:36:08,00:36:14,6,2,1
+Tigre,A favor,Pase corto,Ataque combinado,00:36:13,00:36:19,3,1,4
+Tigre,A favor,Pase corto,Ataque combinado,00:36:16,00:36:22,10,4,4
+Tigre,A favor,Gambeta,Ataque combinado,00:36:20,00:36:26,5,4,8
+Tigre,A favor,Pase corto,Ataque combinado,00:36:24,00:36:30,5,8,9
+Tigre,A favor,Centro,Ataque combinado,00:36:27,00:36:33,4,9,8
+Tigre,A favor,Remate Aereo,Ataque combinado,00:36:32,00:36:38,11,8,8
+Tigre,En contra,Pase corto,Ataque combinado,00:38:02,00:38:08,Rival,6,5
+Tigre,En contra,Pase corto,Ataque combinado,00:38:12,00:38:18,Rival,5,9
+Tigre,En contra,Pase corto,Ataque combinado,00:38:17,00:38:23,Rival,9,5
+Tigre,En contra,Pase corto,Ataque combinado,00:38:22,00:38:28,Rival,5,8
+Tigre,En contra,Remate atajado,Ataque combinado,00:38:27,00:38:33,Rival,8,8
+Tigre,En contra,Pase corto,Ataque combinado,00:46:39,00:46:45,Rival,7,4
+Tigre,En contra,Pase corto,Ataque combinado,00:46:48,00:46:54,Rival,4,5
+Tigre,En contra,Pase corto,Ataque combinado,00:46:52,00:46:58,Rival,5,7
+Tigre,En contra,Centro,Ataque combinado,00:46:57,00:47:03,Rival,7,8
+Tigre,En contra,Remate Aereo,Ataque combinado,00:47:01,00:47:07,Rival,8,8
+Tigre,A favor,Lateral,Pelota Parada,00:48:50,00:48:56,4,9,Volver
+Tigre,A favor,Pase corto,Pelota Parada,00:48:58,00:49:04,8,8,7
+Tigre,A favor,Pase corto,Pelota Parada,00:49:02,00:49:13,3,7,7
+Tigre,A favor,Centro,Pelota Parada,00:49:11,00:49:17,10,7,8
+Tigre,A favor,Remate Aereo,Pelota Parada,00:49:16,00:49:22,9,8,8
+Tigre,A favor,Pase corto,Ataque Directo,00:52:33,00:52:39,5,2,3
+Tigre,A favor,Despeje,Ataque Directo,00:52:37,00:52:43,11,3,6
+Tigre,A favor,Gambeta,Ataque Directo,00:52:42,00:52:48,9,6,9
+Tigre,A favor,Disputa suelo,Ataque Directo,00:52:47,00:52:53,9,8,9
+Tigre,A favor,Remate bloq,Ataque Directo,00:52:52,00:52:58,7,9,8
+Tigre,En contra,Pase corto,Ataque Directo,00:58:01,00:58:07,Rival,5,4
+Tigre,En contra,Pase largo,Ataque Directo,00:58:05,00:58:11,Rival,4,9
+Tigre,En contra,Pase corto,Ataque Directo,00:58:11,00:58:17,Rival,9,8
+Tigre,En contra,Remate bloq,Ataque Directo,00:58:16,00:58:22,Rival,8,8
+Tigre,En contra,Lateral,Pelota Parada,01:58:07,01:58:13,Rival,6,Volver
+Tigre,En contra,Gambeta,Pelota Parada,01:58:17,01:58:23,Rival,6,9
+Tigre,En contra,Pase corto,Pelota Parada,01:58:21,01:58:27,Rival,9,9
+Tigre,En contra,Remate bloq,Pelota Parada,01:58:25,01:58:31,Rival,9,8
+Tigre,A favor,Pase corto,Ataque combinado,01:59:19,01:59:25,2,5,4
+Tigre,A favor,Pase largo,Ataque combinado,01:59:25,01:59:31,6,4,4
+Tigre,A favor,Pase corto,Ataque combinado,01:59:30,01:59:36,Suplente 2,4,7
+Tigre,A favor,Pase corto,Ataque combinado,01:59:36,01:59:42,3,7,7
+Tigre,A favor,Pase corto,Ataque combinado,01:59:41,01:59:47,Suplente 2,7,8
+Tigre,A favor,Pase corto,Ataque combinado,01:59:48,01:59:54,9,8,8
+Tigre,A favor,Remate atajado,Ataque combinado,01:59:54,02:00:00,Suplente 2,8,8
+Tigre,A favor,Corner,Pelota Parada,02:00:09,02:00:15,Suplente 2,7,Volver
+Tigre,A favor,Pase corto,Pelota Parada,02:00:16,02:00:22,Suplente 2,7,7
+Tigre,A favor,Remate pie,Pelota Parada,02:00:21,02:00:27,8,7,8
+Tigre,A favor,Gol,Pelota Parada,02:00:24,02:00:30,8,8,Volver
+Tigre,A favor,Recuperacion,Transición,02:02:09,02:02:15,Suplente 1,9,Volver
+Tigre,A favor,Pase corto,Transición,02:02:15,02:02:21,Suplente 1,9,8
+Tigre,A favor,Remate atajado,Transición,02:02:19,02:02:25,Suplente 3,8,8
+Tigre,A favor,Despeje,Ataque Directo,02:13:50,02:13:56,Suplente 4,3,6
+Tigre,A favor,Pase corto,Ataque Directo,02:13:58,02:14:04,Suplente 5,6,5
+Tigre,A favor,Gambeta,Ataque Directo,02:14:02,02:14:08,Suplente 1,5,8
+Tigre,A favor,Pase corto,Ataque Directo,02:14:06,02:14:12,Suplente 1,8,8
+Tigre,A favor,Remate bloq,Ataque Directo,02:14:10,02:14:16,Suplente 3,8,8
+Tigre,A favor,Gambeta,Ataque Directo,02:15:39,02:15:45,Suplente 2,7,8
+Tigre,A favor,Remate pie,Ataque Directo,02:15:42,02:15:48,Suplente 2,8,8
+Tigre,A favor,Gol,Ataque Directo,02:15:47,02:15:53,Suplente 2,8,Volver
+Tigre,En contra,Pase corto,Ataque combinado,02:16:45,02:16:51,Rival,4,7
+Tigre,En contra,Disputa suelo,Ataque combinado,02:16:54,02:17:00,Rival,7,8
+Tigre,En contra,Pase corto,Ataque combinado,02:16:58,02:17:04,Rival,8,8
+Tigre,En contra,Pase corto,Ataque combinado,02:17:01,02:17:07,Rival,8,7
+Tigre,En contra,Centro,Ataque combinado,02:17:04,02:17:10,Rival,7,8
+Tigre,En contra,Remate pie,Ataque combinado,02:17:08,02:17:14,Rival,8,8
+Tigre,En contra,Gol,Ataque combinado,02:17:12,02:17:18,Rival,8,Volver
+Velez,En contra,Pase corto,Ataque combinado,00:23:25,00:23:31,Rival,5,5
+Velez,En contra,Pase largo,Ataque combinado,00:23:28,00:23:34,Rival,5,9
+Velez,En contra,Pase corto,Ataque combinado,00:23:34,00:23:40,Rival,9,8
+Velez,En contra,Remate atajado,Ataque combinado,00:23:38,00:23:44,Rival,8,8
+Velez,A favor,Tiro libre,Pelota Parada,00:25:32,00:25:38,11,4,Volver
+Velez,A favor,Centro,Pelota Parada,00:25:37,00:25:43,11,4,8
+Velez,A favor,Remate Aereo,Pelota Parada,00:25:40,00:25:46,6,8,8
+Velez,A favor,Remate pie,Pelota Parada,00:25:43,00:25:49,9,8,8
+Velez,A favor,Gol,Pelota Parada,00:25:47,00:25:53,9,8,Volver
+Velez,A favor,Pase largo,Ataque Directo,00:27:43,00:27:49,4,6,9
+Velez,A favor,Remate atajado,Ataque Directo,00:27:47,00:27:53,9,9,8
+Velez,En contra,Recuperacion,Ataque Directo,00:34:22,00:34:28,Rival,7,Volver
+Velez,En contra,Remate atajado,Ataque Directo,00:34:26,00:34:32,Rival,7,8
+Velez,En contra,Gambeta,Ataque Directo,00:36:22,00:36:28,Rival,1,4
+Velez,En contra,Pase corto,Ataque Directo,00:36:29,00:36:35,Rival,4,7
+Velez,En contra,Gambeta,Ataque Directo,00:36:34,00:36:40,Rival,7,7
+Velez,En contra,Remate atajado,Ataque Directo,00:36:38,00:36:44,Rival,7,8
+Velez,En contra,Pase corto,Ataque Directo,00:53:57,00:54:03,Rival,4,5
+Velez,En contra,Pase largo,Ataque Directo,00:54:02,00:54:08,Rival,5,9
+Velez,En contra,Remate atajado,Ataque Directo,00:54:06,00:54:12,Rival,9,8
+Velez,A favor,Tiro libre,Pelota Parada,00:59:44,00:59:50,8,5,Volver
+Velez,A favor,Centro,Pelota Parada,00:59:47,00:59:53,8,5,8
+Velez,A favor,Remate pie,Pelota Parada,00:59:53,00:59:59,2,8,8
+Velez,A favor,Gol,Pelota Parada,00:59:57,01:00:03,2,8,Volver
+Velez,A favor,Tiro libre,Pelota Parada,01:03:13,01:03:19,3,8,Volver
+Velez,A favor,Remate atajado,Pelota Parada,01:03:17,01:03:23,3,8,8
+Velez,En contra,Pase corto,Ataque combinado,01:26:19,01:26:25,Rival,5,5
+Velez,En contra,Pase corto,Ataque combinado,01:26:25,01:26:31,Rival,8,7
+Velez,En contra,Pase corto,Ataque combinado,01:26:28,01:26:34,Rival,7,8
+Velez,En contra,Remate atajado,Ataque combinado,01:26:33,01:26:39,Rival,8,8
+Velez,A favor,Tiro libre,Pelota Parada,02:02:34,02:02:40,3,4,Volver
+Velez,A favor,Pase largo,Pelota Parada,02:02:38,02:02:44,3,4,6
+Velez,A favor,Centro,Pelota Parada,02:02:42,02:02:48,4,9,7
+Velez,A favor,Remate atajado,Pelota Parada,02:02:47,02:02:53,8,7,8
+Velez,En contra,Recuperacion,Transición,02:26:04,02:26:10,Rival,8,Volver
+Velez,En contra,Remate atajado,Transición,02:26:09,02:26:15,Rival,8,8
+Velez,A favor,Pase corto,Ataque combinado,02:26:34,02:26:40,Suplente 4,7,7
+Velez,A favor,Pase corto,Ataque combinado,02:26:38,02:26:44,3,7,8
+Velez,A favor,Remate atajado,Ataque combinado,02:26:42,02:26:48,9,8,8
